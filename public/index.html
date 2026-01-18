@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedbackFlow - Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>FeedbackFlow</h1>
+      <p class="subtitle">Product Feedback Aggregator</p>
+    </header>
+
+    <!-- High Priority Alerts Section -->
+    <section class="priority-alerts">
+      <h2>High Priority Alerts</h2>
+      <div id="priority-list" class="feedback-list">
+        <p class="loading">Loading high-priority items...</p>
+      </div>
+    </section>
+
+    <!-- Filters and Controls -->
+    <section class="controls">
+      <h2>All Feedback</h2>
+      <div class="filter-controls">
+        <select id="filter-source">
+          <option value="">All Sources</option>
+          <option value="discord">Discord</option>
+          <option value="github">GitHub</option>
+          <option value="twitter">Twitter</option>
+          <option value="support">Support</option>
+        </select>
+        <select id="filter-sentiment">
+          <option value="">All Sentiments</option>
+          <option value="positive">Positive</option>
+          <option value="neutral">Neutral</option>
+          <option value="negative">Negative</option>
+        </select>
+        <button id="analyze-btn" class="btn-primary">Run AI Analysis</button>
+      </div>
+    </section>
+
+    <!-- Feedback List -->
+    <section class="feedback-section">
+      <div id="feedback-list" class="feedback-list">
+        <p class="loading">Loading feedback...</p>
+      </div>
+    </section>
+
+    <!-- Status Toast -->
+    <div id="status-toast" class="status-toast hidden"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
